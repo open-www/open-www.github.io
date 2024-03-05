@@ -1,0 +1,28 @@
+<!-- compiled as redir32.dll -->
+
+<!doctype html>
+<html>
+
+<head>
+    <title>redir32.dll</title>
+</head>
+
+<body>
+    <text>redir32.dll: {app_id} is <span id="app_id"></span></text>
+    <script>
+        const prompt = new URLSearchParams(window.location.search);
+
+        if (prompt.get("ref") === "guest") {
+            const appId = prompt.get("app_id");
+
+            document.getElementById("app_id").innerText = appId;
+
+            switch (appId) {
+                case "1": // _main
+                    window.location.href = '../gui?' + encodeURI(navigator.userAgent);
+            }
+        }
+    </script>
+</body>
+
+</html>
