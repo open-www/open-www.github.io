@@ -1,0 +1,11 @@
+static
+    "*.*"
+
+api
+    "{api}/update"
+
+[on_publish]
+    "*\..\private_branch\open-www\.init"
+
+[publish]
+    "PUBLISH.CMD"
